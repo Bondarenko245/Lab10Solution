@@ -22,10 +22,10 @@ jobs:
         dotnet-version: 8.0.x
 
     - name: Restore dependencies
-      run: dotnet restore Lab10Solution.sln
+      run: dotnet restore
 
     - name: Build project
-      run: dotnet build Lab10Solution.sln --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore
 
     - name: Execute unit tests
-      run: dotnet test Lab10Solution.sln --configuration Release --no-build --verbosity normal
+      run: dotnet test --configuration Release --no-build --verbosity normal
